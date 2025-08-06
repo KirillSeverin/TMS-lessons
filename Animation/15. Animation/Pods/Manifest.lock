@@ -1,0 +1,28 @@
+PODS:
+  - Spring (1.0.6)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 50d92a5b9e08848387ae95bf44c6ad20834f7083
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 765c821d31f218e2e3f1e12158b22d2db51cf415
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileManagerClassWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="kf8-HW-xvX">
+                                <rect key="frame" x="25" y="69" width="364" height="768"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="File Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2O-1Y-0PV">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TCL-B0-Vel"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-RK-7JJ">
+                                        <rect key="frame" x="0.0" y="93" width="364" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQq-wI-Z80">
+                                        <rect key="frame" x="0.0" y="316" width="364" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="WFn-vw-GV9"/>
+                                        </constraints>
+                                        <state key="normal" title="Создать файл"/>
+                                        <connections>
+                                            <action selector="createFile" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfK-vj-1b0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-np-kC3">
+                                        <rect key="frame" x="0.0" y="384" width="364" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="3m3-Yl-4gZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Удалить файл"/>
+                                        <connections>
+                                            <action selector="deleteFile" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzm-cV-MK2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7la-Rg-pAh">
+                                        <rect key="frame" x="0.0" y="452" width="364" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Z59-bd-dRG"/>
+                                        </constraints>
+                                        <state key="normal" title="Прочитать файл"/>
+                                        <connections>
+                                            <action selector="readFile" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsT-IO-FmU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LT-qd-rxV">
+                                        <rect key="frame" x="0.0" y="520" width="364" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="9yA-XY-B0j"/>
+                                        </constraints>
+                                        <state key="normal" title="Просмотреть дирркторию"/>
+                                        <connections>
+                                            <action selector="seeDir" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jb3-Fq-OkE"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-4I-5KI">
+                                        <rect key="frame" x="0.0" y="588" width="364" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0pO-RK-7JJ" firstAttribute="height" secondItem="bMg-4I-5KI" secondAttribute="height" id="xHr-IL-oHi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kf8-HW-xvX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="3kT-5Y-MmQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kf8-HW-xvX" secondAttribute="trailing" constant="25" id="4VC-mX-Iwt"/>
+                            <constraint firstItem="kf8-HW-xvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CL5-go-pfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kf8-HW-xvX" secondAttribute="bottom" constant="25" id="EOJ-eR-QM8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fileNameTF" destination="V2O-1Y-0PV" id="EX4-h8-mtl"/>
+                        <outlet property="fileTextView" destination="0pO-RK-7JJ" id="eoa-KQ-FqK"/>
+                        <outlet property="infoTextView" destination="bMg-4I-5KI" id="x5Y-a5-zsF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

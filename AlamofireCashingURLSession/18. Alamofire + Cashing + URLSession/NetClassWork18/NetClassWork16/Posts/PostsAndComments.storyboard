@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ARY-Zc-Q3U">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add PostVC-->
+        <scene sceneID="p29-8B-wCF">
+            <objects>
+                <viewController id="sbj-Rs-wPq" customClass="AddPostVC" customModule="NetClassWork16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UR3-NT-PgV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="28H-xh-zPe">
+                                <rect key="frame" x="25" y="25" width="364" height="758"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HI-ca-88X">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="40K-ty-iFx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text post" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1SI-Yc-9FH">
+                                        <rect key="frame" x="0.0" y="75" width="364" height="457"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-Xv-zEg">
+                                        <rect key="frame" x="0.0" y="557" width="364" height="146"/>
+                                        <state key="normal" title="Add post"/>
+                                        <connections>
+                                            <action selector="addPostAction:" destination="sbj-Rs-wPq" eventType="touchUpInside" id="Ura-ik-IPe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="526-bQ-Ixv">
+                                        <rect key="frame" x="0.0" y="728" width="364" height="30"/>
+                                        <state key="normal" title="Add post AF"/>
+                                        <connections>
+                                            <action selector="addAFPostAction:" destination="sbj-Rs-wPq" eventType="touchUpInside" id="0cA-Tz-IEF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J0b-6D-pj1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="28H-xh-zPe" firstAttribute="leading" secondItem="J0b-6D-pj1" secondAttribute="leading" constant="25" id="66i-eB-z4C"/>
+                            <constraint firstItem="J0b-6D-pj1" firstAttribute="trailing" secondItem="28H-xh-zPe" secondAttribute="trailing" constant="25" id="N4w-EM-GQ8"/>
+                            <constraint firstItem="28H-xh-zPe" firstAttribute="top" secondItem="J0b-6D-pj1" secondAttribute="top" constant="25" id="Zzb-sX-wUm"/>
+                            <constraint firstItem="J0b-6D-pj1" firstAttribute="bottom" secondItem="28H-xh-zPe" secondAttribute="bottom" constant="25" id="qpr-2n-14g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HAR-z6-fub"/>
+                    <connections>
+                        <outlet property="addPostBtn" destination="IOB-Xv-zEg" id="xpY-zl-IuV"/>
+                        <outlet property="textPostTV" destination="1SI-Yc-9FH" id="3rQ-Fe-NVh"/>
+                        <outlet property="titlePostTF" destination="0HI-ca-88X" id="eCb-4e-XzC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pi7-2V-qoC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2354" y="-204"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="tp7-hq-lB2">
+            <objects>
+                <tableViewController id="KeV-p4-fpr" customClass="CommentsTableViewController" customModule="NetClassWork16" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WW5-GS-vPj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="KeV-p4-fpr" id="xdh-Dn-bDS"/>
+                            <outlet property="delegate" destination="KeV-p4-fpr" id="jO5-eN-lFG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Comments" id="eEi-mp-F4K"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gh5-bK-yVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2354" y="459"/>
+        </scene>
+        <!--Posts-->
+        <scene sceneID="gdC-dy-xSL">
+            <objects>
+                <tableViewController id="ARY-Zc-Q3U" customClass="PostsTableViewController" customModule="NetClassWork16" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yfd-gF-DiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ARY-Zc-Q3U" id="r6q-x9-dnD"/>
+                            <outlet property="delegate" destination="ARY-Zc-Q3U" id="HPc-OH-9pD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Posts" id="gWb-6O-qao">
+                        <barButtonItem key="rightBarButtonItem" title="Add Post" id="LEq-xW-N7a">
+                            <connections>
+                                <segue destination="sbj-Rs-wPq" kind="show" identifier="addPost" id="F5E-k1-eca"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="KeV-p4-fpr" kind="show" identifier="showComments" id="nug-tF-46q"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-bt-t8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="459"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

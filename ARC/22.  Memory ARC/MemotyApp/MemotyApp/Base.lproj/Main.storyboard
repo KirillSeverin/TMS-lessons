@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dyD-Vq-PvT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XfS-oh-MzQ">
+            <objects>
+                <viewController id="dyD-Vq-PvT" customClass="ViewController" customModule="MemotyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oOH-0L-oFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-fi-A57">
+                                <rect key="frame" x="72.5" y="421.5" width="269" height="53"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <state key="normal" title="Open Second VC">
+                                    <color key="titleColor" red="0.08235294118" green="0.39607843139999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9HT-A6-hXu" kind="presentation" id="ceC-Rd-zHi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=". . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xw-RM-goj">
+                                <rect key="frame" x="192" y="169" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4zJ-Y0-Wg9"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mCc-fi-A57" firstAttribute="centerY" secondItem="oOH-0L-oFp" secondAttribute="centerY" id="4sy-nG-04v"/>
+                            <constraint firstItem="7xw-RM-goj" firstAttribute="top" secondItem="4zJ-Y0-Wg9" secondAttribute="top" constant="125" id="7K4-S6-UBD"/>
+                            <constraint firstItem="7xw-RM-goj" firstAttribute="centerX" secondItem="oOH-0L-oFp" secondAttribute="centerX" id="G7H-Am-XeJ"/>
+                            <constraint firstItem="mCc-fi-A57" firstAttribute="centerX" secondItem="oOH-0L-oFp" secondAttribute="centerX" id="Lw7-ct-hXd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="7xw-RM-goj" id="3VR-L7-S5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USM-33-tSm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="90"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="ZCy-S0-yr9">
+            <objects>
+                <viewController id="9HT-A6-hXu" customClass="SecondViewController" customModule="MemotyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQi-Ao-2uK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-uv-cwJ">
+                                <rect key="frame" x="134" y="394.5" width="146" height="53"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <state key="normal" title="Close VC">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeVCPressed" destination="9HT-A6-hXu" eventType="touchUpInside" id="FQy-Z6-tkr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5yC-1e-PBL"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eb9-uv-cwJ" firstAttribute="centerX" secondItem="QQi-Ao-2uK" secondAttribute="centerX" id="IwQ-P0-6ic"/>
+                            <constraint firstItem="eb9-uv-cwJ" firstAttribute="centerY" secondItem="QQi-Ao-2uK" secondAttribute="centerY" id="vrv-pj-ro2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JfQ-Zy-q2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="90"/>
+        </scene>
+    </scenes>
+</document>
